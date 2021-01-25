@@ -33,6 +33,6 @@ node {
     }
     stage('Slack'){
        // slackSend channel: 'Charandeep Deol'
-         slackSend channel: 'pragraconsulting2020', message: 'hi'  
+         slackSend message: 'hi', teamDomain: 'pragraconsulting2020', tokenCredentialId: 'slack'  
     }
 }
