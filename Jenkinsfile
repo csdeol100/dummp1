@@ -32,6 +32,7 @@ node {
         //archiveArtifacts artifacts: '**/*.jar', followSymlinks: false
     }
     stage('Slack'){
-        slackSend channel: 'Charandeep Deol'
+       // slackSend channel: 'Charandeep Deol'
+        slackSend channel: 'Charandeep Deol', color: 'Blue', message: 'Successful Build', teamDomain: 'pragraconsulting2020', tokenCredentialId: 'slack'
     }
 }
