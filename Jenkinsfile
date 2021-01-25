@@ -31,4 +31,7 @@ node {
     stage('Publish Artifact') {
         //archiveArtifacts artifacts: '**/*.jar', followSymlinks: false
     }
+    stage('Slack'){
+        slackSend channel: 'Charandeep Deol'
+    }
 }
