@@ -7,7 +7,7 @@ node {
         withMaven(jdk: 'jdk8', maven: 'm363') {
          //sh 'mvn compile'
            sh 'echo hello'
-           sleep 10
+           sleep 5
         }
     }
     stage('Unit Test') {
