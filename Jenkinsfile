@@ -33,6 +33,6 @@ node {
     }
     stage('Slack'){
        // slackSend channel: 'Charandeep Deol'
-       slackSend message: '${env.JOB_NAME} ${env.BUILD_NUMBER} ', teamDomain: 'pragraconsulting2020', tokenCredentialId: 'slack'  
+       slackSend message: 'Build Successful ${JOB_NAME}', teamDomain: 'pragraconsulting2020', tokenCredentialId: 'slack'  
     }
 }
