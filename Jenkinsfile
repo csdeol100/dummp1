@@ -5,14 +5,14 @@ node {
     }
     stage('Compile ') {
         withMaven(jdk: 'jdk8', maven: 'm363') {
-         mvn compile
+        sh ' mvn compile'
            //sh 'echo hello'
            sleep 5
         }
     }
     stage('Unit Test') {
         withMaven(jdk: 'jdk8', maven: 'm363') {
-         mvn Test
+         sh 'mvn Test'
            //sh 'echo test'
           // sleep 10
         }
