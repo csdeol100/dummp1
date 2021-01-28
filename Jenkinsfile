@@ -31,4 +31,6 @@ node {
     stage('Publish Artifact') {
         archiveArtifacts artifacts: '**/*.jar', followSymlinks: false
     }
+    stage('Slack'){
+        slackSend channel: 'devops-nov-2020', color: 'red', message: "Project Name '${JOB_NAME}'  Build Number  '${BUILD_NUMBER}'"
 }
