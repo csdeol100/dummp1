@@ -12,7 +12,7 @@ node {
     }
     stage('Unit Test') {
         withMaven(jdk: 'jdk8', maven: 'm363') {
-         sh 'mvn Test'
+         sh 'mvn test'
            //sh 'echo test'
           // sleep 10
         }
