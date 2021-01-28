@@ -33,4 +33,5 @@ node {
     }
     stage('Slack'){
         slackSend channel: 'devops-nov-2020', color: 'red', message: "Project Name '${JOB_NAME}'  Build Number  '${BUILD_NUMBER}'"
+    }
 }
