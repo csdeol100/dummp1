@@ -24,11 +24,11 @@ node {
     }
     stage('Package') {
         withMaven(jdk: 'jdk8', maven: 'm363') {
-         //sh 'mvn package'
-          sh 'echo package'
+         sh 'mvn package'
+          //sh 'echo package'
         }
     }
     stage('Publish Artifact') {
-        //archiveArtifacts artifacts: '**/*.jar', followSymlinks: false
+        archiveArtifacts artifacts: '**/*.jar', followSymlinks: false
     }
 }
