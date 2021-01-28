@@ -18,8 +18,8 @@ node {
         }
     }
     stage('Publish Test Result') {
-        //junit '**/*.xml'
-        sh 'echo result'
+        junit '**/*.xml
+        //sh 'echo result'
         sleep 5
     }
     stage('Package') {
