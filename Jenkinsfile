@@ -29,9 +29,11 @@ node {
         }
     }
     stage('Publish Artifact') {
-        archiveArtifacts artifacts: '**/*.jar', followSymlinks: false , "emailext attachLog: true, body: '', recipientProviders: [buildUser()], subject: 'build stats', to: 'charandeol100@gmail.com'"
+        archiveArtifacts artifacts: '**/*.jar', followSymlinks: false 
     }
+   
     stage('Slack'){
-        slackSend channel: 'devops-nov-2020', color: 'red', message: "Project Name '${JOB_NAME}'  Build Number  '${BUILD_NUMBER}'"
+        //slackSend channel: 'devops-nov-2020', color: 'red', message: "Project Name '${JOB_NAME}'  Build Number  '${BUILD_NUMBER}'"
+        emailext attachLog: true, body: '', recipientProviders: [buildUser()], subject: 'build stats', to: 'charandeol100@gmail.com'
     }
 }
