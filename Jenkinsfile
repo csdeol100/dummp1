@@ -18,7 +18,7 @@ node {
         }
     }
     stage('Publish Test Result') {
-        junit '**/*.xml
+        junit '**/*.xml'
         //sh 'echo result'
         sleep 5
     }
