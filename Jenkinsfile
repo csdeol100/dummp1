@@ -1,7 +1,7 @@
 node {
     
     stage('Checkout SCM') {
-        git branch: 'master', credentialsId: 'githubs', url: 'https://github.com/csdeol100/dummp1.git'
+       git credentialsId: 'github_id', url: 'https://github.com/csdeol100/dummp1.git'
     }
     stage('Compile ') {
         withMaven(jdk: 'jdk8', maven: 'm363') {
