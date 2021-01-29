@@ -33,7 +33,7 @@ node {
     }
    
     stage('Slack'){
-        //slackSend channel: 'devops-nov-2020', color: 'red', message: "Project Name '${JOB_NAME}'  Build Number  '${BUILD_NUMBER}'"
-        emailext attachLog: true, body: '', recipientProviders: [buildUser()], subject: 'build stats', to: 'charandeol100@gmail.com'
+        slackSend channel: 'build_push_jenkins', color: 'red', message: "Project Name '${JOB_NAME}'  Build Number  '${BUILD_NUMBER}'"
+        //emailext attachLog: true, body: '', recipientProviders: [buildUser()], subject: 'build stats', to: 'charandeol100@gmail.com'
     }
 }
